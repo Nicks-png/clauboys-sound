@@ -401,16 +401,16 @@ img { max-width: 100%; display: block; }
   );
 }
 
-/* branco → reflexo branco brilhante (para texto branco) */
+/* prata/cromo → visível sobre texto branco */
 .text-shimmer-white::after {
   background-image: linear-gradient(
     90deg,
     transparent 0%,
-    transparent 35%,
-    rgba(255, 255, 255, 0.08) 43%,
-    rgba(255, 255, 255, 0.88) 50%,
-    rgba(255, 255, 255, 0.08) 57%,
-    transparent 65%,
+    transparent 33%,
+    rgba(155, 162, 185, 0.25) 41%,
+    rgba(185, 192, 215, 0.92) 50%,
+    rgba(155, 162, 185, 0.25) 59%,
+    transparent 67%,
     transparent 100%
   );
   --shimmer-dur: 5s;
