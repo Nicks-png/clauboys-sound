@@ -121,7 +121,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="section-eyebrow">O que fazemos</p>
-              <h2 className="section-title">Nossos Serviços</h2>
+              <h2 className="section-title"><span className="text-shimmer-white" data-text="Nossos Serviços">Nossos Serviços</span></h2>
               <p className="section-desc">
                 Do subwoofer à central multimídia, instalamos com cuidado e técnica
                 para seu carro soar exatamente como você quer.
@@ -156,7 +156,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="section-eyebrow">Nosso trabalho</p>
-              <h2 className="section-title">Galeria</h2>
+              <h2 className="section-title"><span className="text-shimmer-white" data-text="Galeria" style={{ '--shimmer-delay': '1.5s' } as React.CSSProperties}>Galeria</span></h2>
               <p className="section-desc">
                 Cada instalação é única. Veja alguns dos trabalhos que já realizamos.
               </p>
@@ -197,7 +197,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="section-eyebrow">O que dizem os clientes</p>
-              <h2 className="section-title">4,7 no Google</h2>
+              <h2 className="section-title"><span className="text-shimmer-white" data-text="4,7 no Google" style={{ '--shimmer-delay': '0.8s' } as React.CSSProperties}>4,7 no Google</span></h2>
               <p className="section-desc">125 avaliações de clientes que confiaram no Cláudio e na equipe.</p>
             </div>
           </ScrollReveal>
@@ -223,7 +223,7 @@ export default function Home() {
           <div className="container">
             <h2 className="cta-band-title">
               Pronto para<br />
-              <span style={{ color: 'var(--gold)' }}>transformar</span> seu som?
+              <span className="text-shimmer" data-text="transformar" style={{ color: 'var(--gold)', '--shimmer-delay': '2s' } as React.CSSProperties}>transformar</span> seu som?
             </h2>
             <p className="cta-band-sub">
               Fale com o Cláudio agora mesmo e receba um orçamento personalizado para o seu carro.

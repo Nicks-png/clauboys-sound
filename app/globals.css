@@ -366,15 +366,30 @@ img { max-width: 100%; display: block; }
 /* ========================
    TEXT SHIMMER (igual RuneBass .ol2w)
    ======================== */
-.text-shimmer {
+.text-shimmer,
+.text-shimmer-white {
   display: inline-block;
   position: relative;
 }
-.text-shimmer::after {
+.text-shimmer::after,
+.text-shimmer-white::after {
   content: attr(data-text);
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-shimmer var(--shimmer-dur, 4s) var(--shimmer-delay, 0s) ease-in-out infinite;
+  pointer-events: none;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/* dourado → reflexo claro (para texto gold) */
+.text-shimmer::after {
+  background-image: linear-gradient(
     90deg,
     transparent 0%,
     transparent 35%,
@@ -384,15 +399,21 @@ img { max-width: 100%; display: block; }
     transparent 65%,
     transparent 100%
   );
-  background-size: 200% 100%;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: text-shimmer 4s ease-in-out infinite;
-  pointer-events: none;
-  font: inherit;
-  letter-spacing: inherit;
+}
+
+/* branco → reflexo branco brilhante (para texto branco) */
+.text-shimmer-white::after {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.08) 43%,
+    rgba(255, 255, 255, 0.88) 50%,
+    rgba(255, 255, 255, 0.08) 57%,
+    transparent 65%,
+    transparent 100%
+  );
+  --shimmer-dur: 5s;
 }
 
 /* ========================
